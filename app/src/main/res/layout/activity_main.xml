@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Main content area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Root status message -->
+        <TextView
+            android:id="@+id/root_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Root status will be displayed here."
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- User input (hidden if rooted) -->
+        <EditText
+            android:id="@+id/user_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter something"
+            android:visibility="gone" />
+
+        <!-- Submit button -->
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <!-- Display entered value -->
+        <TextView
+            android:id="@+id/display_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
